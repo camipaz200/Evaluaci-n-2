@@ -1,0 +1,13 @@
+# /etc/systemd/system/atrapanieblas.service
+[Unit]
+Description=Atrapanieblas API + puente MQTT
+After=network-online.target mosquitto.service
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/atrapanieblas
+ExecStart=/home/pi/atrapanieblas/venv/bin/python servidor.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,3 @@
+# /etc/mosquitto/acl  (la app solo accede a los tópicos del proyecto)
+user app_iot
+topic readwrite atrapanieblas/meneses-quintoman/#
